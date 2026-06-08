@@ -46,4 +46,9 @@ Suitable for frequent modifications	              Suitable for read-heavy worklo
 Iterator supports remove()	                      Iterator does not support remove(), set(), or add()
 
 
+ShortCuts
+1. Single machine → Locks / CAS
+2. Database system → Transactions / Optimistic locking
+3. Distributed system → Saga / 2PC
+4. Event-driven system → Event sourcing
    
