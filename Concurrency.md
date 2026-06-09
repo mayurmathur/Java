@@ -51,4 +51,36 @@ ShortCuts
 2. Database system → Transactions / Optimistic locking
 3. Distributed system → Saga / 2PC
 4. Event-driven system → Event sourcing
-   
+
+
+
+Problems
+-> Check then act
+
+if(a.length()>10){
+a = a-1;
+}
+Solution: -> Lock/Synchronized
+
+-> read-modify-write
+  count++;
+
+Solution -> AtomicInteger
+
+Update multiple rows then use locks instead of AtomicInteger
+
+
+-> Asynchronus processing
+BlockingQueue<> bq = new ArrayBlockingKey<>(100)
+
+-> Limiting Concurrent Accesses to same resource
+  Semaphores
+
+-> For Objects of class
+BlockingQueue<Connection> pool = ArrayBlockingQueue<>();
+
+poll.put(new Connection());
+
+Connection c = poll.take();
+//doSomething
+poll.put(c);
