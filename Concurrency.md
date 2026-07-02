@@ -63,7 +63,7 @@ a = a-1;
 Solution: -> Lock/Synchronized
 
 -> read-modify-write
-  count++;
+  count++; -> its actually three steps -> read count, int k = count+1, count = k
 
 Solution -> AtomicInteger
 
