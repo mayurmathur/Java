@@ -1,0 +1,15 @@
+https://www.youtube.com/watch?v=6LRsHXPGpXA
+
+Arrays.asList()  ->  (they resize through unsupported method for structural change)
+though set is supported.
+
+
+List.of()  -> Proprtly immutable
+
+
+Collections.unModifiableList() -> its just a wrapper around the existing list you cannot modify this but you can still modify xisting list
+and it will be updated and will reflect in the unmodifiable.
+
+
+Trefication of LinkedList
+  After certain threshold Linked list is converted to red black trees after Java 8
