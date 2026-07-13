@@ -1,0 +1,21 @@
+Created by 
+implementing Runnable -> gives only way to run. -> new Thread(r implements runnable)
+extends Threads -> gives more function
+
+Daemon thread
+ .setDaemon(true/false); -> it makes it a background thread and jvm donot wait for it to complete
+ only call it before start otherwise it will give illegal state exceptions.
+ Ex.Garabage colletion is Daemon thread.
+
+
+Starts() method creates the new thread and it runs
+whereas only calling run() -> new thread is not created, it will run in a sequential form.
+
+Overloading of run method
+  you can do that but it will have no impact since only run() is looked
+
+Override start
+  you can do it but run will not be called.
+
+Restart same thread ?
+  No, illegalThreadException
