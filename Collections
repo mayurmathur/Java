@@ -1,3 +1,92 @@
+
+
+List
+-> Insertion order is maintained
+   -> Arraylist -> Dynamic resizing, random access
+   -> LinkedList -> maintains insertion order, only sequential access
+   -> Vector -> synchorinized Array List
+   -> Stack
+
+Set
+-> doesn't contain duplicate elements
+   -> HashSet -> Unique elements, unordered
+   -> LinkedHashSet -> Ordered hashset
+   -> TreeSet  -> Must implement Comparable -> Always implements Sorted Set -> Used Red black trees
+Queue
+-> added at the end
+  -> PriorityQueue -> high elements is served before low priority order
+  -> ArrayDeque -> can be added or removed from any side-> resizable Array
+
+Map
+-> Key value pair
+ -> HashMap -> Allows only one null key but multiple null values are allowed
+ -> HashTable -> Doesn't allow any null key nore null values, synchronized
+ -> TreeMap -> entries are soreted in Ascending order, implicitly implemets red black tree.
+
+-> Map doesn't implemenys collection because its a key value pair whereas everything else has just value.
+
+
+Fail fast vs Fail Safe Iterators
+ -> Fail fast throws concurrentModificationException , when we structurally edit it
+ -> Fail safe doesn't throw it because they work on the copy/clone of collection insteaf of the original one
+
+
+BlockingQueue
+ -> concurrent in nature
+ -> multiple threads can access
+ -> it handles this by blocking threads if it tries to fetch form empty or add in a full queue
+
+Synchromized vs concurrent Collections
+  both are threadsafe
+   -> Synchromized is slower because it blocks the all the segmentsm so other cannot access it
+   -> Concurrent collection -> lock stripping, you can access other segments
+
+
+HashMap
+  uses both equals and hashcode method
+   -> Equals is required to fetch.
+
+
+
+LinkedList is implemented using Doubly LinkedList
+Arraylists -> searchable
+LinkedLists -> addition or deletes are quicker here.
+
+hashmap -> Random storage, null keys allowed,hashtable and LinkedList are used to implement, hashcode and equals need to be implemented
+Treemap -> sorted ina scending order, no null keys allowed, redblack trees, comparator, hashcode and equals need to be implemented
+LinkedHashMap -> Insertion order is maintaned, null keys allowed, hashtable and doubly linkedlist, hashcode and equals need to be implemented
+
+PriorityQueue
+  -> highest priority element is served irrespective of insertion order
+
+
+Key of hashmap
+  -> override equals() and hashcode()
+  -> key must be immutable , so hashcode is not changing, it also helps in caching
+
+Make ArrayList read only
+  -> Collections.unmodifiableCollection()
+
+Iterating Map
+  -> foreach entry set loop
+  -> foreach of keySet
+  -> KeySet iterator
+  -> entry set iterator
+
+How to remove duplicate elements from ArrayList?
+ -> HashSet -> you will loose insertion order
+ -> LinkedhashSet -> use this and insertion order will be maintained
+
+
+WeakHashMap
+  -> Weak Reference  
+  -> Strong Reference integer a = 1;
+  -> Soft Reference integer a =1 ; SoftReference<Integer> soft = new Softreference<Integer>(a); a= null;
+
+
+Try to ignore resizing  -> try usining initial capactiy
+
+
 https://www.youtube.com/watch?v=6LRsHXPGpXA
 
 Arrays.asList()  ->  (they resize through unsupported method for structural change)
