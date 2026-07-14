@@ -1,0 +1,37 @@
+in traditional collections if one thread iterates and others tries to modify structural changes then ConcurrentModificationException is thrown
+  Because it works on copy of this
+
+
+ConcurrentHashMap Performance better than HashTable/synchronizedMap
+   in HashTable lock is taken ont he complete map.
+
+ConcurrencyLevel in ConcurrentHashMap by default its 16
+
+Multiple threads can read from ConcurrentHashMap, If one of them tries to write it needs to acquire the lock on the segment
+
+Nulls are not allowed in ConcurrentHashMap because we donot know if it has been deleted or missing and becomes ambiguity due to parallel
+
+
+trnsient ModCount -> Which helps to identify the modifications in Non cocnurrent collections
+
+Concurrent Modification can happen in single threaded environment as well, if we are iterating and modifying in between.
+
+Option 1) use itr.remove() instead of list.remove() for single threaded environment
+
+Option 2) CopyOnWriteArrayList 
+
+replace is fine because it doesn't update modCount.
+
+
+CopyOnwrite
+-> creates a clone copy and JVM synchronizes it.
+-> cannot remove using itr. (it throws UnsupportedOperation) sp rmeove by list.remove();
+
+in collections less than 7 elements InsertionSort otherwise merge sort is used
+
+
+
+
+
+
+  
